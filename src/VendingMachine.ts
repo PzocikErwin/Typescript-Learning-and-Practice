@@ -49,4 +49,6 @@ export class VendingMachine {
     public getCoins(): Coin[] {
         return this.coins;
     }
+
+    
 }
