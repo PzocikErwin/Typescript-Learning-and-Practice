@@ -1,0 +1,5 @@
+Typescript permite agilizar el proceso al declarar y asignarle el valor con el constructor.
+Tipado Nominal: a typescript no le importa el nombre del tipo, le importa su estructura. EJ imprimimos el nombre de un producto y de una persona y ambas funcionan debido a que al lenguaje le importa su comporatamiento, no de donde viene
+
+Cada clase definida solo existe dentro de ella, para conectar los archivos usamos el EXPORT: que ofrece algo al exterior para ser utilizado por otros. IMPORT: permite pedir algo de otros archivos.
+Es decir en java se importaba desde un espacio de nombres o paquete, desde Typescript se importa directo desde un archivo.
