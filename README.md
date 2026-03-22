@@ -62,3 +62,5 @@ Tipado Nominal: a typescript no le importa el nombre del tipo, le importa su est
 
 Cada clase definida solo existe dentro de ella, para conectar los archivos usamos el EXPORT: que ofrece algo al exterior para ser utilizado por otros. IMPORT: permite pedir algo de otros archivos.
 Es decir en java se importaba desde un espacio de nombres o paquete, desde Typescript se importa directo desde un archivo.
+
+En TypeScript en los tests no se definen los métodos dentro de una clase, sino en la invocación de funciones globales (como it o test). Para organizar y jerarquizar estas pruebas, se utiliza la función describe, la cual permite agrupar los tests en bloques anidados que funcionan como 'carpetas virtuales', facilitando la lectura y el mantenimiento del código sin depender de una estructura rígida de clases."
