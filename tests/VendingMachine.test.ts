@@ -2,6 +2,7 @@ import { VendingMachine } from '../src/VendingMachine';
 import { Product } from '../src/Product';
 import { Coin } from '../src/Coin';
 import { Drinks } from '../src/Drinks';
+import { Snack } from '../src/Snack';
 
 describe('VendingMachine', () => {
     
@@ -16,13 +17,13 @@ describe('VendingMachine', () => {
     });
 
     test('debería añadir un producto correctamente', () => {
-        const product = new Product("Coca-Cola", 150, 10, 500);
-        machine.addProduct(product);
+        const snack = new Snack("Papas", 1.25, 10, 50);
+        machine.addProduct(snack);
         
         const productsInMachine = machine.getProducts();
         
         expect(productsInMachine).toHaveLength(1);
-        expect(productsInMachine).toContain(product);
+        expect(productsInMachine).toContain(snack);
     });
 
     test('debería poder añadir una bebida (que es un producto) a la maquina', () => {
@@ -32,8 +33,8 @@ describe('VendingMachine', () => {
         const productsInMachine = machine.getProducts();
 
         expect(productsInMachine).toHaveLength(1);
-        expect(productsInMachine[0]).toBeInstanceOf(Drinks);
-        expect(productsInMachine[0].name).toBe('Fanta');
+        expect(productsInMachine[0]!).toBeInstanceOf(Drinks);
+        expect(productsInMachine[0]!.name).toBe('Fanta');
     });
 });
 
