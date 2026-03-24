@@ -36,6 +36,20 @@ describe('VendingMachine', () => {
         expect(productsInMachine[0]!).toBeInstanceOf(Drinks);
         expect(productsInMachine[0]!.name).toBe('Fanta');
     });
+
+    test('debería devolver las descripciones correctas para diferentes tipos de productos (polimorfismo)', () => {
+        const snack = new Snack("Papas", 1.25, 10, 50);
+        const drink = new Drinks('Fanta', 1.50, 5, 500, 500);
+        machine.addProduct(snack);
+        machine.addProduct(drink);
+
+        const descriptions = machine.getProductsDescription();
+
+        expect(descriptions).toEqual([
+            'Snack: Papas (50g)',
+            'Bebida: Fanta (500ml)'
+        ]);
+    });
 });
 
 describe('Drinks', () => {

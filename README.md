@@ -64,3 +64,12 @@ Cada clase definida solo existe dentro de ella, para conectar los archivos usamo
 Es decir en java se importaba desde un espacio de nombres o paquete, desde Typescript se importa directo desde un archivo.
 
 En TypeScript en los tests no se definen los métodos dentro de una clase, sino en la invocación de funciones globales (como it o test). Para organizar y jerarquizar estas pruebas, se utiliza la función describe, la cual permite agrupar los tests en bloques anidados que funcionan como 'carpetas virtuales', facilitando la lectura y el mantenimiento del código sin depender de una estructura rígida de clases."
+
+
+## Principios de POO...
+
+1_ Aplicacion de herencia mediante la clase producto, la cual en su constructor contiene nombre, precio, cantidad, peso. La cual la heredan las clases hijas de Drinks y Snacks.
+
+2_ Aplicacion de abstraccion mediante la clase abstracta de Product para que nadie pueda crear un "producto" genérico. Es decur todo lo que sea un producto en esta máquina debe tener nombre, precio, cantidad y peso". Usando la logica en la VendingMachine esta no necesita saber si esta manejando un Snack o Drink, solo necesita saber que esta manejando un Producto.
+
+3_Aplicacion de Polimorfismo usando un metodo abstracto que se encarga de obtener la descripcion del producto, entonces la clase product se describe con el nombre y el peso. La clase drinks se comporta implementando el mismo metodo con el nombre y volumen.

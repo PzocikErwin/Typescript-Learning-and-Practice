@@ -50,5 +50,10 @@ export class VendingMachine {
         return this.coins;
     }
 
-    
+    public getProductsDescription(): string[] {
+        return this.products.map(product => product.getDescription());
+    }
+
+
+        
 }

@@ -16,6 +16,7 @@ export abstract class Product { //Clase abstracta (permite que no se puedan crea
         this.weight = weight
     }
 
+    public abstract getDescription(): string;
 
 
 }
