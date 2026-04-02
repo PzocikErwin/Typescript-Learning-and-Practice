@@ -13,6 +13,7 @@ describe('VendingMachine', () => {
     });
 
     test('al inicializar la maquina esta empieza con 0 de credito', () => {
+        // [POO - Encapsulamiento]
         expect(machine.getCurrentCredit()).toBe(0);
     });
 
@@ -27,6 +28,7 @@ describe('VendingMachine', () => {
     });
 
     test('debería poder añadir una bebida (que es un producto) a la maquina', () => {
+        // [POO - Herencia]
         const drink = new Drinks('Fanta', 1.25, 5, 500, 500);
         machine.addProduct(drink);
 
@@ -38,6 +40,7 @@ describe('VendingMachine', () => {
     });
 
     test('debería devolver las descripciones correctas para diferentes tipos de productos (polimorfismo)', () => {
+        // [POO - Polimorfismo]
         const snack = new Snack("Papas", 1.25, 10, 50);
         const drink = new Drinks('Fanta', 1.50, 5, 500, 500);
         machine.addProduct(snack);
@@ -54,6 +57,7 @@ describe('VendingMachine', () => {
 
 describe('Drinks', () => {
     test('debería crear una bebida con nombre, precio, cantidad, peso y volumen', () => {
+        // [POO - Herencia]
         const drink = new Drinks('Coca-Cola', 1.5, 10, 500, 500);
         expect(drink.name).toBe('Coca-Cola');
         expect(drink.price).toBe(1.5);
