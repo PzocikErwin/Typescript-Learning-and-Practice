@@ -1,4 +1,6 @@
-export abstract class Product { //Clase abstracta (permite que no se puedan crear productos genericos
+import { InterfazDescription } from './InterfazDescripcion';
+
+export abstract class Product implements InterfazDescription { //Clase abstracta (permite que no se puedan crear productos genericos
     //En su lugar obliga a que se creen clases mas especificas del producto que hereden de products
     
     

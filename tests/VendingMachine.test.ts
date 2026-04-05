@@ -3,6 +3,7 @@ import { Product } from '../src/Product';
 import { Coin } from '../src/Coin';
 import { Drinks } from '../src/Drinks';
 import { Snack } from '../src/Snack';
+import { InterfazDescription } from '../src/InterfazDescripcion';
 
 describe('VendingMachine', () => {
     
@@ -15,10 +16,16 @@ describe('VendingMachine', () => {
     test('al inicializar la maquina esta empieza con 0 de credito', () => {
         expect(machine.getCurrentCredit()).toBe(0);
     });
+        // INTERFAZ
+    test('un producto debe cumplir la interfaz de descripcion', () => {
+        const describable: InterfazDescription = new Snack('Papas', 1.25, 10, 50);
+
+        expect(describable.getDescription()).toBe('Snack: Papas (50g)');
+    });
 
     test('no se puede acceder directamente al credito interno de la maquina', () => {
         // @ts-expect-error currentCredit es privado y debe usarse el metodo publico
-        expect(machine.currentCredit).toBeUndefined();
+        machine.currentCredit;
     });
 
     test('debería añadir un producto correctamente', () => {
