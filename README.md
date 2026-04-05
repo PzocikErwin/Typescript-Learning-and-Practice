@@ -73,3 +73,5 @@ En TypeScript en los tests no se definen los métodos dentro de una clase, sino 
 2_ Aplicacion de abstraccion mediante la clase abstracta de Product para que nadie pueda crear un "producto" genérico. Es decur todo lo que sea un producto en esta máquina debe tener nombre, precio, cantidad y peso". Usando la logica en la VendingMachine esta no necesita saber si esta manejando un Snack o Drink, solo necesita saber que esta manejando un Producto.
 
 3_Aplicacion de Polimorfismo usando un metodo abstracto que se encarga de obtener la descripcion del producto, entonces la clase product se describe con el nombre y el peso. La clase drinks se comporta implementando el mismo metodo con el nombre y volumen.
+
+4_Aplicacion de Encapsulamiento usando atributos private de la clase VendingMachine y poder acceder a ellos mediante metodos publicos como getCurrentCredit()
