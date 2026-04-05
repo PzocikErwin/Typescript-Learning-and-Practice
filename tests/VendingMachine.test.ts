@@ -11,10 +11,14 @@ describe('VendingMachine', () => {
     beforeEach(() => {
         machine = new VendingMachine();
     });
-
-    test('al inicializar la maquina esta empieza con 0 de credito', () => {
         // [POO - Encapsulamiento]
+    test('al inicializar la maquina esta empieza con 0 de credito', () => {
         expect(machine.getCurrentCredit()).toBe(0);
+    });
+
+    test('no se puede acceder directamente al credito interno de la maquina', () => {
+        // @ts-expect-error currentCredit es privado y debe usarse el metodo publico
+        expect(machine.currentCredit).toBeUndefined();
     });
 
     test('debería añadir un producto correctamente', () => {

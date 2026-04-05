@@ -2,9 +2,11 @@ import { Product } from "./Product";
 import { Coin } from "./Coin";
 
 export class VendingMachine {
-    public currentCredit: number;
-    public products: Product[];
-    public coins: Coin[];
+    
+    //ENCAPSULAMIENTO (ACCEDE MEDIANTE METODOS PUBLICOS)
+    private currentCredit: number;
+    private products: Product[];
+    private coins: Coin[];
     
     constructor() {
         this.currentCredit = 0;
