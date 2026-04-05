@@ -75,3 +75,5 @@ En TypeScript en los tests no se definen los métodos dentro de una clase, sino 
 3_Aplicacion de Polimorfismo usando un metodo abstracto que se encarga de obtener la descripcion del producto, entonces la clase product se describe con el nombre y el peso. La clase drinks se comporta implementando el mismo metodo con el nombre y volumen.
 
 4_Aplicacion de Encapsulamiento usando atributos private de la clase VendingMachine y poder acceder a ellos mediante metodos publicos como getCurrentCredit()
+
+Implementacion de una sencilla interfaz que obliga a cualquier clase que la implemente a tener un método getDescription() que devuelva un string.
