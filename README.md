@@ -68,7 +68,7 @@ En TypeScript en los tests no se definen los métodos dentro de una clase, sino 
 
 ## Principios de POO...
 
-1_ Aplicacion de herencia mediante la clase producto, la cual en su constructor contiene nombre, precio, cantidad, peso. La cual la heredan las clases hijas de Drinks y Snacks.
+1_ Aplicacion de herencia mediante la clase producto, la cual en su constructor contiene nombre, precio, cantidad, peso. La cual la heredan las clases hijas de Drinks y Snacks para evitar instanciar productos genericos.
 
 2_ Aplicacion de abstraccion mediante la clase abstracta de Product para que nadie pueda crear un "producto" genérico. Es decur todo lo que sea un producto en esta máquina debe tener nombre, precio, cantidad y peso". Usando la logica en la VendingMachine esta no necesita saber si esta manejando un Snack o Drink, solo necesita saber que esta manejando un Producto.
 
@@ -76,4 +76,4 @@ En TypeScript en los tests no se definen los métodos dentro de una clase, sino 
 
 4_Aplicacion de Encapsulamiento usando atributos private de la clase VendingMachine y poder acceder a ellos mediante metodos publicos como getCurrentCredit()
 
-Implementacion de una sencilla interfaz que obliga a cualquier clase que la implemente a tener un método getDescription() que devuelva un string.
+Implementacion de una sencilla interfaz que obliga a cualquier clase que la implemente a tener un método getDescription() implementada por Product que devuelva un string.
